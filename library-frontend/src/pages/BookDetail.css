@@ -1,0 +1,161 @@
+.book-detail {
+  padding: 32px 0 64px;
+  flex: 1;
+}
+
+.book-detail__back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+.book-detail__back:hover {
+  color: var(--brass);
+}
+
+.book-detail__missing {
+  padding: 60px 0;
+}
+
+.index-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: #fff;
+  border: 1px solid var(--rule);
+  max-width: 880px;
+}
+
+.index-card__cover {
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.index-card__cover span {
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.index-card__tab {
+  position: absolute;
+  top: -14px;
+  right: 32px;
+  background: var(--brass);
+  color: var(--paper);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius);
+  transform: rotate(1.5deg);
+}
+
+.index-card__body {
+  padding: 32px 32px 36px;
+}
+
+.index-card__genre {
+  margin: 0 0 4px;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.index-card__body h1 {
+  font-size: 1.9rem;
+  margin-bottom: 4px;
+}
+
+.index-card__author {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+
+.index-card__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.index-card__rating {
+  font-size: 0.85rem;
+  color: var(--brass);
+}
+
+.index-card__description {
+  max-width: 60ch;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+
+.index-card__meta {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 18px;
+  margin: 0 0 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.index-card__meta dt {
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  margin-bottom: 2px;
+}
+
+.index-card__meta dd {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.index-card__cta {
+  background: var(--green);
+  color: var(--paper);
+  border: none;
+  padding: 12px 22px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.index-card__cta:hover {
+  background: var(--green-deep);
+}
+
+.index-card__cta--secondary {
+  background: transparent;
+  color: var(--red);
+  border: 1.5px solid var(--red);
+}
+
+.index-card__cta--secondary:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+.index-card__hold-note {
+  font-size: 0.9rem;
+  color: var(--green);
+  font-style: italic;
+  font-family: var(--serif);
+}
+
+@media (max-width: 640px) {
+  .index-card {
+    grid-template-columns: 1fr;
+  }
+  .index-card__cover {
+    height: 160px;
+  }
+  .index-card__meta {
+    grid-template-columns: repeat(2, auto);
+  }
+}
