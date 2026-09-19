@@ -1,0 +1,21 @@
+.records-filter {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 24px;
+}
+
+.records-filter__btn {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  padding: 7px 14px;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.records-filter__btn--active {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--paper);
+}

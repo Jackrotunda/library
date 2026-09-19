@@ -1,0 +1,135 @@
+.login {
+  padding: 60px 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.login__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.login__card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--brass);
+  padding: 32px 30px;
+}
+
+.login__eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  color: var(--brass);
+  font-style: italic;
+  font-family: var(--serif);
+}
+
+.login__card h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.login__sub {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+}
+
+.login__tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--paper-dim);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.login__tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.login__tab--active {
+  background: var(--green);
+  color: var(--paper);
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.login__form input {
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.login__form button {
+  margin-top: 6px;
+  background: var(--green);
+  color: var(--paper);
+  border: none;
+  padding: 11px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login__form button:hover {
+  background: var(--green-deep);
+}
+
+.login__success {
+  color: var(--green);
+  font-style: italic;
+  font-family: var(--serif);
+}
+
+.login__error {
+  margin: 0;
+  color: var(--red);
+  font-size: 0.85rem;
+}
+
+.login__hint {
+  margin: 18px 0 0;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+
+.login__switch {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+}
+
+.login__switch a {
+  color: var(--brass);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login__switch a:hover {
+  text-decoration: underline;
+}

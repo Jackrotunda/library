@@ -1,0 +1,35 @@
+.browse__eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  color: var(--brass);
+  font-style: italic;
+  font-family: var(--serif);
+}
+
+.browse h1 {
+  font-size: 1.9rem;
+}
+
+.browse__sub {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+}
+
+.browse__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.browse__empty {
+  padding: 48px 0;
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--rule);
+}
+
+.browse__empty p:first-child {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
