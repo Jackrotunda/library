@@ -80,3 +80,30 @@
   font-style: italic;
   font-family: var(--serif);
 }
+
+.login__error {
+  margin: 0;
+  color: var(--red);
+  font-size: 0.85rem;
+}
+
+.login__hint {
+  margin: 18px 0 0;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+
+.login__switch {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+}
+
+.login__switch a {
+  color: var(--brass);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login__switch a:hover {
+  text-decoration: underline;
+}

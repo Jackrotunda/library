@@ -16,3 +16,7 @@
 .stamp--out {
   color: var(--red);
 }
+
+.stamp--warn {
+  color: var(--brass);
+}

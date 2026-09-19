@@ -61,6 +61,13 @@
   opacity: 1;
 }
 
+.navbar__link--btn {
+  background: transparent;
+  border: none;
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
 @media (max-width: 640px) {
   .navbar__inner {
     height: auto;

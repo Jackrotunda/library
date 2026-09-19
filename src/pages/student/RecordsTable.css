@@ -1,0 +1,83 @@
+.records-page__eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  color: var(--brass);
+  font-style: italic;
+  font-family: var(--serif);
+}
+
+.records-page h1 {
+  font-size: 1.75rem;
+}
+
+.records-page__sub {
+  color: var(--ink-soft);
+  margin: 10px 0 26px;
+}
+
+.records-page__empty {
+  padding: 32px 0;
+  border-top: 1px dashed var(--rule);
+}
+
+.records-page__empty a {
+  color: var(--brass);
+  text-decoration: none;
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th {
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: lowercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding: 0 10px 10px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.records-table td {
+  padding: 13px 10px 13px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.88rem;
+  vertical-align: middle;
+}
+
+.records-table a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.records-table a:hover {
+  color: var(--brass);
+}
+
+.records-table__action {
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.records-table__action:hover {
+  background: var(--green);
+  color: var(--paper);
+}
+
+.records-table__action--danger {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.records-table__action--danger:hover {
+  background: var(--red);
+  color: #fff;
+}

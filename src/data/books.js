@@ -1,8 +1,9 @@
 // Mock catalog data — stands in for a future backend/API call.
 // Each book uses a CSS gradient "spine" instead of real cover art,
-// so the UI works with zero external assets.
+// so the UI works with zero external assets. totalCopies / availableCopies
+// model physical stock so borrow/return can move a real number.
 
-export const books = [
+export const initialBooks = [
   {
     id: "b001",
     title: "The Salt Path",
@@ -10,14 +11,14 @@ export const books = [
     genre: "Memoir",
     year: 2019,
     isbn: "978-1-2345-6789-0",
-    status: "available",
-    dueDate: null,
     shelf: "M 42",
     spine: ["#8C4A2F", "#C97C4B"],
     description:
       "A raw, wind-scoured account of walking the coastal path after losing everything, and finding an unlikely home in the act of moving forward.",
     rating: 4.4,
     pages: 288,
+    totalCopies: 3,
+    availableCopies: 3,
   },
   {
     id: "b002",
@@ -26,14 +27,14 @@ export const books = [
     genre: "Science Fiction",
     year: 2021,
     isbn: "978-1-2345-6789-1",
-    status: "checked-out",
-    dueDate: "2026-10-02",
     shelf: "SF 118",
     spine: ["#1E3A2E", "#3C6B52"],
     description:
       "Nine mapmakers across nine collapsing worlds race to chart a route between them before the last stable door closes.",
     rating: 4.7,
     pages: 412,
+    totalCopies: 2,
+    availableCopies: 1,
   },
   {
     id: "b003",
@@ -42,14 +43,14 @@ export const books = [
     genre: "Poetry",
     year: 2018,
     isbn: "978-1-2345-6789-2",
-    status: "available",
-    dueDate: null,
     shelf: "P 07",
     spine: ["#4A3B6B", "#7A66A6"],
     description:
       "Spare, exacting poems that treat quiet as a language of its own — what is withheld, and what that withholding says.",
     rating: 4.2,
     pages: 96,
+    totalCopies: 4,
+    availableCopies: 4,
   },
   {
     id: "b004",
@@ -58,14 +59,14 @@ export const books = [
     genre: "Mystery",
     year: 2020,
     isbn: "978-1-2345-6789-3",
-    status: "checked-out",
-    dueDate: "2026-09-25",
     shelf: "MY 55",
     spine: ["#3A2E2A", "#6B4F45"],
     description:
       "A retired coroner is pulled back to her hometown when an orchard planted over an old grave starts bearing fruit no one asked for.",
     rating: 4.1,
     pages: 356,
+    totalCopies: 2,
+    availableCopies: 0,
   },
   {
     id: "b005",
@@ -74,14 +75,14 @@ export const books = [
     genre: "Fantasy",
     year: 2022,
     isbn: "978-1-2345-6789-4",
-    status: "available",
-    dueDate: null,
     shelf: "F 203",
     spine: ["#0F4C5C", "#1B7A8C"],
     description:
       "Twin heirs to a drowned throne must choose between raising their kingdom from the sea or letting the tide keep it.",
     rating: 4.6,
     pages: 528,
+    totalCopies: 3,
+    availableCopies: 3,
   },
   {
     id: "b006",
@@ -90,14 +91,14 @@ export const books = [
     genre: "Nonfiction",
     year: 2017,
     isbn: "978-1-2345-6789-5",
-    status: "available",
-    dueDate: null,
     shelf: "N 31",
     spine: ["#5A5346", "#8C8270"],
     description:
       "A field engineer's notebook on the quiet, unglamorous machines that keep cities running, and the people who tend them.",
     rating: 4.0,
     pages: 240,
+    totalCopies: 2,
+    availableCopies: 2,
   },
   {
     id: "b007",
@@ -106,14 +107,14 @@ export const books = [
     genre: "Science Fiction",
     year: 2023,
     isbn: "978-1-2345-6789-6",
-    status: "checked-out",
-    dueDate: "2026-09-30",
     shelf: "SF 121",
     spine: ["#6B1E2B", "#A13D2B"],
     description:
       "An AI gardener tending the last seed vault on Earth begins cross-breeding memories instead of plants.",
     rating: 4.5,
     pages: 344,
+    totalCopies: 1,
+    availableCopies: 0,
   },
   {
     id: "b008",
@@ -122,79 +123,15 @@ export const books = [
     genre: "History",
     year: 2016,
     isbn: "978-1-2345-6789-7",
-    status: "available",
-    dueDate: null,
     shelf: "H 14",
     spine: ["#7A5C1E", "#B08D3E"],
     description:
       "A social history of Europe's wheelwrights and cartwrights, told through 200 years of trade letters and apprenticeship contracts.",
     rating: 3.9,
     pages: 312,
-  },
-  {
-    id: "b009",
-    title: "Small Gods of the Interstate",
-    author: "Marina Cole",
-    genre: "Fiction",
-    year: 2020,
-    isbn: "978-1-2345-6789-8",
-    status: "available",
-    dueDate: null,
-    shelf: "F 88",
-    spine: ["#2E4A3A", "#547A63"],
-    description:
-      "A trucker, a hitchhiker, and a roadside shrine keeper cross paths on a stretch of highway where minor miracles keep happening.",
-    rating: 4.3,
-    pages: 276,
-  },
-  {
-    id: "b010",
-    title: "The Last Cartographer's Apprentice",
-    author: "Idris Lang",
-    genre: "Fantasy",
-    year: 2019,
-    isbn: "978-1-2345-6789-9",
-    status: "checked-out",
-    dueDate: "2026-10-10",
-    shelf: "F 205",
-    spine: ["#3B2A4A", "#6B4E8C"],
-    description:
-      "An apprentice inherits a map that redraws itself each night, and a kingdom that badly wants to know why.",
-    rating: 4.4,
-    pages: 398,
-  },
-  {
-    id: "b011",
-    title: "Field Notes on Rust",
-    author: "Callum Reyes",
-    genre: "Nonfiction",
-    year: 2021,
-    isbn: "978-1-2345-6790-0",
-    status: "available",
-    dueDate: null,
-    shelf: "N 33",
-    spine: ["#7A3E2E", "#B0663F"],
-    description:
-      "What oxidation teaches us about entropy, decay, and the long patience of industrial ruins.",
-    rating: 3.8,
-    pages: 188,
-  },
-  {
-    id: "b012",
-    title: "The Quiet Insurrection",
-    author: "Renata Osei",
-    genre: "History",
-    year: 2015,
-    isbn: "978-1-2345-6790-1",
-    status: "available",
-    dueDate: null,
-    shelf: "H 09",
-    spine: ["#4A2E2E", "#7A4F4F"],
-    description:
-      "A close account of the seamstresses' strike of 1911 and the slow, unglamorous work of organizing.",
-    rating: 4.2,
-    pages: 264,
+    totalCopies: 2,
+    availableCopies: 2,
   },
 ];
 
-export const genres = [...new Set(books.map((b) => b.genre))].sort();
+export const genres = [...new Set(initialBooks.map((b) => b.genre))].sort();

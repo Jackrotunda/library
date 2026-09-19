@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import StatusStamp from "./StatusStamp";
 import "./BookCard.css";
 
-export default function BookCard({ book }) {
+export default function BookCard({ book, linkBase = "/student/book" }) {
+  const available = book.availableCopies > 0;
   return (
-    <Link to={`/book/${book.id}`} className="book-card">
+    <Link to={`${linkBase}/${book.id}`} className="book-card">
       <div
         className="book-card__spine"
         style={{
@@ -17,7 +18,11 @@ export default function BookCard({ book }) {
         <p className="book-card__genre">{book.genre}</p>
         <h3 className="book-card__title">{book.title}</h3>
         <p className="book-card__author">{book.author}</p>
-        <StatusStamp status={book.status} dueDate={book.dueDate} />
+        <StatusStamp tone={available ? "available" : "out"}>
+          {available
+            ? `${book.availableCopies} on the shelf`
+            : "All copies out"}
+        </StatusStamp>
       </div>
     </Link>
   );

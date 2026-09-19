@@ -1,0 +1,118 @@
+.manage-books__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.manage-books__add-btn {
+  background: var(--green);
+  color: var(--paper);
+  border: none;
+  padding: 11px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.86rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.manage-books__add-btn:hover {
+  background: var(--green-deep);
+}
+
+.manage-books__form {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--brass);
+  padding: 22px 24px;
+  margin: 24px 0;
+  max-width: 720px;
+}
+
+.manage-books__form h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.manage-books__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.manage-books__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.manage-books__form input,
+.manage-books__form textarea {
+  padding: 8px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+
+.manage-books__description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.manage-books__description textarea {
+  resize: vertical;
+}
+
+.manage-books__form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.manage-books__save-btn {
+  background: var(--green);
+  color: var(--paper);
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.manage-books__save-btn:hover {
+  background: var(--green-deep);
+}
+
+.manage-books__cancel-btn {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.manage-books__table {
+  margin-top: 28px;
+}
+
+.manage-books__row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .manage-books__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
