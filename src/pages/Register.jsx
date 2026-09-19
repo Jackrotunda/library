@@ -6,7 +6,12 @@ import "./Login.css";
 export default function Register() {
   const { register, error } = useAuth();
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: "", username: "", password: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    username: "",
+    password: "",
+  });
   const [success, setSuccess] = useState(false);
 
   function handleChange(e) {
@@ -48,6 +53,19 @@ export default function Register() {
                     type="text"
                     name="name"
                     value={form.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </label>
+                <label>
+                  Email address
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="name@example.com"
+                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                    title="Enter a valid email address, e.g. name@example.com"
+                    value={form.email}
                     onChange={handleChange}
                     required
                   />

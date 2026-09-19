@@ -1,4 +1,4 @@
-# Cebu Commons Library — Frontend
+# Rosemont Library — Frontend
 
 A UI-only prototype for a library catalog system. No backend yet — all
 book data lives in `src/data/books.js` as mock data, structured so it can

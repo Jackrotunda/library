@@ -38,6 +38,32 @@
   margin-bottom: 24px;
 }
 
+.login__tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--paper-dim);
+  border-radius: var(--radius);
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.login__tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.login__tab--active {
+  background: var(--green);
+  color: var(--paper);
+}
+
 .login__form {
   display: flex;
   flex-direction: column;

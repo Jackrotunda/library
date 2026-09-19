@@ -17,8 +17,8 @@ export default function Navbar() {
         <NavLink to="/" className="navbar__brand">
           <span className="navbar__mark">Ⓛ</span>
           <span>
-            Cebu Commons
-            <small>Public Library</small>
+            Rosemont Library
+            <small>School Library System</small>
           </span>
         </NavLink>
         <nav className="navbar__links">

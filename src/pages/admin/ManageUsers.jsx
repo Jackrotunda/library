@@ -24,6 +24,7 @@ export default function ManageUsers() {
             <tr>
               <th>Name</th>
               <th>Username</th>
+              <th>Email</th>
               <th>Active loans</th>
               <th>Total borrowed</th>
             </tr>
@@ -40,6 +41,7 @@ export default function ManageUsers() {
                 <tr key={s.username}>
                   <td>{s.name}</td>
                   <td>{s.username}</td>
+                  <td>{s.email}</td>
                   <td>{active}</td>
                   <td>{theirRecords.length}</td>
                 </tr>
